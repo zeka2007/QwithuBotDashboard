@@ -1,0 +1,51 @@
+.nav_img{
+  border-radius: 200px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin: 10px 20px;
+}
+.nav_links{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 21px;
+  margin: 23px 15px;
+  color: white;
+  font-family: Impact;
+}
+#nn{
+  color: white;
+  font-family: fantasy;
+  font-size: 21px;
+  text-decoration: none;
+  right: 0;
+  position: absolute;
+  margin: 23px 80px;
+}
+
+#main_head_text{
+  font-family: Impact;
+  font-size: 72px;
+  left: 0;
+  right: 0;
+  margin: 24px 0;
+  color: #ffffff;
+}
+#main_down_head_text{
+  font-family: Impact;
+  font-size: 60px;
+  left: 0;
+  right: 0;
+  margin-top: 24px;
+  color: #ffffff;
+}
+
+nav{
+  background-color: #282828;
+  height: 75px;
+}
+body{
+  background-color: #3f3f3f;
+}

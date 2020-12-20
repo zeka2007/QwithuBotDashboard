@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for("static", filename = "css/stule.css")}}>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="https://discord.gg/HEEhJrNw6w" class="nav_links">сервер  поддержки</a>
+      <a href="#" class="nav_links">узнать больше</a>
+      <a href="#" id="nn">{{articles}}</a>
+      <img src={{avatar}} alt="user_avatar" class="nav_img">
+    </nav>
+    {% block body %}{% endblock %}
+  </body>
+</html>
