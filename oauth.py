@@ -3,7 +3,7 @@ import requests
 class Oauth:
     client_id = "768148604367536138"
     client_secret = "mSH2k8pwVI5Gm4cPkAPbzYnIcFlwWCGO"
-    redirect_uri = "http://127.0.0.1:5000/login"
+    redirect_uri = "https://qwithubotdashboard-3e6561.us1.kinto.io/login"
     scope = "identify%20guilds%20guilds.join"
     discord_login_url = f"https://discord.com/api/oauth2/authorize?client_id={client_id}&redirect_uri={redirect_uri}&response_type=code&scope={scope}"
     discord_token_url = "https://discord.com/api/oauth2/token"
