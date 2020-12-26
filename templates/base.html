@@ -3,15 +3,26 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href={{url_for("static", filename = "css/stule.css")}}>
+    <link rel="shortcut icon" href={{url_for("static", filename = "img/QwithuBot_logo2.jpg")}}>
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
     <nav>
       <a href="https://discord.gg/HEEhJrNw6w" class="nav_links">сервер  поддержки</a>
-      <a href="#" class="nav_links">узнать больше</a>
-      <a href="#" id="nn">{{articles}}</a>
+      <a href="#main_1_up_text" class="nav_links">узнать больше</a>
+      <a href={{bot_redirect}} class="nav_links">добавить в дискорд</a>
       <img src={{avatar}} alt="user_avatar" class="nav_img">
+      <ul class="mmenuu">
+      <li display = none> <h3>{{articles}}</h3>
+          <ul class="ssubmenuu">
+              <li><a href={{user_btn_url}}>Мой сервера</a></li>
+              <li> <a href="/exit" id="exit_link">выйти</a> </li>
+      </ul>
+
     </nav>
     {% block body %}{% endblock %}
+    <footer>
+      <h2 id="footer_text">Тут ничего нет =(</h2>
+    </footer>
   </body>
 </html>

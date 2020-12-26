@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for("static", filename = "css/stule.css")}}>
+    <link rel="shortcut icon" href={{url_for("static", filename = "img/QwithuBot_logo2.jpg")}}>
+    <title>QwithuBot</title>
+  </head>
+  <body>
+    <nav>
+      <a href="https://discord.gg/HEEhJrNw6w" class="nav_links">сервер  поддержки</a>
+      <a href="#main_1_up_text" class="nav_links">узнать больше</a>
+      <a href={{bot_redirect}} class="nav_links">добавить в дискорд</a>
+      <ul class="mmenuu">
+      <a href={{user_btn_url}} id="login_btn">{{articles}}</a>
+
+    </nav>
+    <h1 id="main_head_text">Qwithu Bot</h1>
+    <h2 id="main_down_head_text">Простой и удобный бот для Discord</h2>
+
+    <div class="moderation">
+      <h3 id="main_1_up_text">Система модерации</h3>
+      <h3 id="main_1_down_text">Следите за порядком на своём сервере с помощью специальных алгоритмов нашего бота.</h3>
+    </div>
+
+
+    <div class="levels">
+      <h3 id="main_2_up_text">Уровни</h3>
+      <h3 id="main_2_down_text">Используйте систему уровней для поощрения участников за общение.</h3>
+      <img src={{url_for('static', filename = 'img/Screenshot_4.png')}} alt="levels" id="main_2_img">
+    </div>
+
+    <div class="functions">
+      <h3 id="main_1_up_text">Множество функций</h3>
+      <h3 id="main_1_down_text">Используйте безграничные возможности нашего бота для оформления своего сервера абсолютно бесплатно!</h3>
+    </div>
+    <footer>
+      <h2 id="footer_text">Тут ничего нет =(</h2>
+    </footer>
+  </body>
+</html>
