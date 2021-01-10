@@ -71,11 +71,11 @@ class Oauth:
         url = f"{Oauth.discord_api_url}/channels/{channel_id}/messages"
         headers = {'content-type': 'application/json',
                     "Authorization": f"Bot {Oauth.bot_token}"}
-      send = {"embed": {
+        send = {"embed": {
                 "color": 0x0c0c0,
                 "title": title,
                 "description": message
-            }
-        }
+               }
+             }
 
         message = requests.post(url = url, data=json.dumps(send), headers = headers)
