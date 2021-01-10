@@ -160,5 +160,4 @@ def exit():
     resp.set_cookie('token', '0', max_age=0)
     return resp
 if __name__ == "__main__":
-    app.run(debug = True)
-client.run('NzY4MTQ4NjA0MzY3NTM2MTM4.X48QIg.FfL0oSJUx7BV1KUi6FpwFXgyW9E')
+    app.run(debug = True, host='0.0.0.0', port=5000)
