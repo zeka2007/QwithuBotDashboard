@@ -7,15 +7,24 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
+    <div class="preloader" id="page-preloader">
+      <div class="loader"></div>
+    </div>
     <nav>
-      <a href="https://discord.gg/HEEhJrNw6w" class="nav_links">сервер  поддержки</a>
-      <a href="#main_1_up_text" class="nav_links">узнать больше</a>
-      <a href={{bot_redirect}} class="nav_links">добавить в дискорд</a>
+
+        <button id="menu_btn">
+        <div class="first_line" id="first_line"></div>
+        <div class="second_line" id="second_line"></div>
+        <div class="thre_line" id="thre_line"></div>
+      </button>
+      <a href="https://discord.gg/HEEhJrNw6w" class="nav_links" id="nav_links_1">сервер  поддержки</a>
+      <a href="#main_1_up_text" class="nav_links" id="nav_links_2">узнать больше</a>
+      <a href={{bot_redirect}} class="nav_links" id="nav_links_3">добавить в дискорд</a>
       <img src={{avatar}} alt="user_avatar" class="nav_img">
       <ul class="mmenuu">
-      <li display = none> <h3>{{articles}}</h3>
+      <li display = none> <h3 id="username">{{articles}}</h3>
           <ul class="ssubmenuu">
-              <li><a href={{user_btn_url}}>Мой сервера</a></li>
+              <li><a href=/servers>Мой сервера</a></li>
               <li> <a href="/exit" id="exit_link">выйти</a> </li>
       </ul>
 
@@ -24,5 +33,17 @@
     <footer>
       <h2 id="footer_text">Тут ничего нет =(</h2>
     </footer>
+    <script type="text/javascript">
+      document.body.onload = function () {
+
+        setTimeout(function () {
+          var preloader = document.getElementById('page-preloader');
+          if (!preloader.classList.contains('done')) {
+            preloader.classList.add('done');
+          }
+        }, 200)
+
+      }
+    </script>
   </body>
 </html>

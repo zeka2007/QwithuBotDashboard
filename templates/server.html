@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+servers
+{% endblock %}
+
+{% block body %}
+{% for serv in servers %}
+    <div class="server">
+      {% if not serv['icon'] == None %}
+    <img src="https://cdn.discordapp.com/icons/{{serv['id']}}/{{serv['icon']}}.png" alt="server_icon" class="server_icon">
+    {% endif %}
+
+    {% if serv['icon'] == None %}
+    <div class="none_server_icon">{{serv['name'][0]}}</div>
+  {% endif %}
+
+      <span class="server_name">{{serv['name']}}</span>
+
+
+      {% if serv['bot_in'] %}
+        <a href={{serv['redirect']}} class="invite_link">К панеле управления</a>
+      {% endif %}
+      {% if not serv['bot_in'] %}
+        <a href={{serv['redirect']}} target="_blank" class="invite_link">Авторизовать</a>
+      {% endif %}
+
+</div>
+{% endfor %}
+
+{% endblock %}

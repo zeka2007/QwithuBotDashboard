@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Панель управления{% endblock %}
+
+{% block body %}
+<!-- <button id="menu_btn">
+<div class="first_line" id="first_line"></div>
+<div class="second_line" id="second_line"></div>
+<div class="thre_line" id="thre_line"></div>
+</button> -->
+
+<div class="div_menu" id="div_m">
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/welcomeScreen';">Приветствия</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/embed_message';">Embed сообщения</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/user_command';">Пользовательские команды</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/timers';">Напоминания</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/music';">Музыка</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/random';">Генератор чисел</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/subscribers';">Подписки</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/moderation';">Модерация</div>
+  <div class="ul_element" onclick="document.location.href = '{{server_id}}/anymore';">Прочее...</div>
+</div>
+
+<script type="text/javascript">
+  const Button = document.getElementById("menu_btn");
+  function onClick() {
+
+    var preloader = document.getElementById('div_m');
+    var first_line = document.getElementById("first_line");
+    var second_line = document.getElementById("second_line");
+    var thre_line = document.getElementById("thre_line");
+     if (!preloader.classList.contains('show_menu')) {
+       preloader.classList.remove('hide_el');
+        preloader.classList.add('show_menu');
+        preloader.classList.remove('hide_menu');
+     }
+     else {
+       preloader.classList.add('hide_menu');
+       preloader.classList.remove('show_menu');
+       setTimeout(() => { preloader.classList.add('hide_el'); }, 1000);
+     }
+
+
+     // if (first_line.classList.contains('rotate_first_el_class')) {
+     //   first_line.classList.remove('rotate_first_el_class');
+     //   first_line.classList.remove('rotate_second_el_class');
+     //    second_line.classList.remove('hide_el');
+     //
+     //    // preloader.classList.remove('hide_menu');
+     // }
+     // else {
+     //   first_line.classList.add('rotate_second_el_class');
+     //   thre_line.classList.add('rotate_first_el_class');
+     //    second_line.classList.add('hide_el');
+     //    setTimeout(() => { thre_line.classList.add('rote_second'); setTimeout(() => { first_line.classList.add('rote_first'); }, 1000);}, 1000);
+     //
+     //
+     // }
+  }
+  Button.addEventListener('click', onClick);
+</script>
+{% endblock %}

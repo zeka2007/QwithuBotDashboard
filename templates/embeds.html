@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}embed сообщения{% endblock %}
+
+{% block body %}
+<form method="post">
+
+ <!-- <input type="text" name="message" id="message"> -->
+ <select class="select_channel" name="channels" id="channels">
+   {% for channel in channels %}
+   {% if channel.get('type') == 0 %}
+     <option value={{channel.get('id')}}>{{channel.get('name')}}</option>
+     {% endif %}
+   {% endfor %}
+</select>
+
+ <div class="embed" id="embed">
+
+  <input type="text" name="title" value="" placeholder="Заголовок" class="embed_title">
+ <textarea name="message" id="message" placeholder="Текст сообщения"></textarea>
+ <!-- <input type="color" id="color" class="input_color" value="#282828" name="color" title="Choose your color"> -->
+
+</div>
+<input type="submit" id="btn" value="отправить">
+
+</form>
+<!-- <script type="text/javascript">
+  const color = document.getElementById('color');
+  const divEmbed = document.getElementById('embed');
+  function onClick() {
+    divEmbed.style.color = color.value;
+  }
+  color.addEventListener('click', onClick);
+</script> -->
+
+{% endblock %}
